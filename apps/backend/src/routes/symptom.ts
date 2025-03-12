@@ -5,6 +5,6 @@ import { authMiddleware } from '../middlewares/authMiddleware';
 const symptomRoutes = new Hono();
 
 symptomRoutes.post('/', authMiddleware, SymptomController.create);
-symptomRoutes.get('/', authMiddleware, SymptomController.getAll);
+symptomRoutes.get('/verify', authMiddleware, SymptomController.getAll);
 
 export default symptomRoutes;
